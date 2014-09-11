@@ -8,12 +8,11 @@ module.exports = ->
     build:
       options:
         sizes: [
-            name: 'thumbnails'
             width: 240
         ]
       files: [
         expand: true
         cwd: '<%= path.source.images %>/'
         src: ['{,**}/*.{jpg,jpeg,gif,png}']
-        custom_dest: '<%= path.build.images %>/{%= path %}/{%= name %}/'
+        custom_dest: '<%= path.build.thumbnails %>/{%= path %}/{%= width %}/'
       ]
