@@ -5,7 +5,7 @@ Resizing and croping images with GraphicMagic
 ###
 module.exports = ->
   @config 'responsive_images',
-    build:
+    thumbnails:
       options:
         sizes: [
             width: 240

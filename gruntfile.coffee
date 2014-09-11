@@ -25,10 +25,10 @@ module.exports = (grunt) ->
         assets: '<%= path.build.root %>/assets'
         fonts: '<%= path.build.assets %>/fonts'
         images: '<%= path.build.assets %>/images'
-        thumbnails: '<%= path.build.images %>/thumbnails'
         styles: '<%= path.build.assets %>/styles'
         scripts: '<%= path.build.assets %>/scripts'
         sprites: '<%= path.build.assets %>/sprites'
+        thumbnails: '<%= path.build.images %>/thumbnails'
 
     # Specify files
     file:
@@ -55,6 +55,7 @@ module.exports = (grunt) ->
     'sprite'
     'sass'
     'autoprefixer'
+    'responsive_images:thumbnails'
     'browserSync'
     'watch'
   ]
@@ -72,7 +73,7 @@ module.exports = (grunt) ->
     'uncss:build'
     'csso:build'
     'clean:styles'
-    'responsive_images:build'
+    'responsive_images:thumbnails'
     'processhtml:build'
     'size_report:build'
   ]
