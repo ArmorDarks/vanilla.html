@@ -25,6 +25,7 @@ module.exports = (grunt) ->
         assets: '<%= path.build.root %>/assets'
         fonts: '<%= path.build.assets %>/fonts'
         images: '<%= path.build.assets %>/images'
+        thumbnails: '<%= path.build.images %>/thumbnails'
         styles: '<%= path.build.assets %>/styles'
         scripts: '<%= path.build.assets %>/scripts'
         sprites: '<%= path.build.assets %>/sprites'
