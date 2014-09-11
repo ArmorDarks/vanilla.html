@@ -15,5 +15,5 @@ module.exports = ->
         expand: true
         cwd: '<%= path.source.images %>/'
         src: ['{,**}/*.{jpg,jpeg,gif,png}']
-        custom_dest: '<%= path.build.images %>/{%= name %}/'
+        custom_dest: '<%= path.build.images %>/{%= path %}/{%= name %}/'
       ]
