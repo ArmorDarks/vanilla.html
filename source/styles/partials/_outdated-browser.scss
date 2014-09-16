@@ -14,5 +14,12 @@
 	color: #000;
 
 	margin-bottom: 0;
+
 	padding: $base-spacing-unit;
+}
+
+.site-outdated-browser__link {
+	color: #09F;
+
+	text-decoration: underline;
 }
