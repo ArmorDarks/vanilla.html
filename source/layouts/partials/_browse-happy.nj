@@ -1,3 +1,0 @@
-<!--[if lt IE 8]>
-	<p class="site-browse-happy">Вы используете <strong>устаревший</strong> браузер. Пожалуйста, <a href="http://outdatedbrowser.com/{{ language }}" target="_blank">обновите браузер</a> для нормальной работы сайта.</p>
-<![endif]-->
