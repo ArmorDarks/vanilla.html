@@ -79,7 +79,7 @@ module.exports = (grunt) ->
   ]
 
   ###
-  A task for scss-files linting
+  A task for scss files linting
   ###
   grunt.registerTask 'lint:sass', [
     'scsslint'
