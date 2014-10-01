@@ -86,10 +86,11 @@ module.exports = (grunt) ->
   ]
 
   ###
-  A task for for a static server with a watch
+  A task for a static server with a watch
   ###
   grunt.registerTask 'serve', [
     'browserSync'
     'watch'
   ]
+
   return
