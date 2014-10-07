@@ -5,6 +5,8 @@ Lint .scss files
 ###
 module.exports = ->
   @config 'scsslint',
-    files: [ '<%= path.source.styles %>/{,**/}*.scss' ]
-    options:
-      compact: true
+    build:
+      options:
+        compact: true
+      files:
+        src: ['<%= path.source.styles %>/{,**/}*.scss']
