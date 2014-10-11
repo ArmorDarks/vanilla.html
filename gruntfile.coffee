@@ -41,7 +41,9 @@ module.exports = (grunt) ->
           prefixed: '<%= path.build.styles %>/style.prefixed.css'
           tidy: '<%= path.build.styles %>/style.tidy.css'
           min: '<%= path.build.styles %>/style.min.css'
-        sprite: '<%= path.build.sprites %>/sprite.png'
+        sprite:
+          compiled: '<%= path.build.sprites %>/sprite.png'
+          hash: '<%= path.build.sprites %>/hash.json'
 
   grunt.loadTasks 'tasks'
 
