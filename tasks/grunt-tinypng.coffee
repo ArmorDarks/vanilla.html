@@ -11,7 +11,6 @@ module.exports = ->
         checkSigs: true
         sigFile: '<%= file.build.sprite.hash %>'
         summarize: true
-        showProgress: true
         stopOnImageError: true
       files: [
         src: '<%= file.build.sprite.compiled %>'
