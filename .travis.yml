@@ -9,6 +9,7 @@ before_install:
   - sudo apt-get install graphicsmagick -y
   - npm config set spin=false
   - npm config set loglevel=warn
+  - sed -i "s/YOUR_API_KEY_HERE/$TINYPNG_API_KEY/g" /tasks/grunt-tinypng.coffee
 notifications:
   slack:
     rooms:
