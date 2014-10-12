@@ -7,7 +7,7 @@ module.exports = ->
   @config 'tinypng',
     build:
       options:
-        apiKey: 'YOUR_API_KEY_HERE'
+        apiKey: '<%= env.tinypng.api.key %>'
         checkSigs: true
         sigFile: '<%= file.build.sprite.hash %>'
         summarize: true

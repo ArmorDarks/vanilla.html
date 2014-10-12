@@ -8,6 +8,12 @@ module.exports = (grunt) ->
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
 
+    #Specify environment variables
+    env:
+      tinypng:
+        api:
+          key: process.env.TINYPNG_API_KEY
+
     # Specify your source and build directory structure
     path:
       source:
@@ -78,6 +84,7 @@ module.exports = (grunt) ->
     'responsive_images:thumbnails'
     'processhtml:build'
     'size_report:build'
+    'tinypng:build'
   ]
 
   ###
