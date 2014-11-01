@@ -14,6 +14,8 @@ module.exports = ->
             styles: '/assets/styles'
             scripts: '/assets/scripts'
             thumbnails: '/assets/images/thumbnails'
+          inline: '<%= data.inline %>'
+          external: '<%= data.external %>'
       files: [
         expand: true
         cwd: '<%= path.source.layouts %>/'
