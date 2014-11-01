@@ -62,7 +62,7 @@ module.exports = (grunt) ->
         thumbnails: '/assets/images/thumbnails'
       data:
         currentYear: new Date().getFullYear()
-      external: grunt.file.readJSON 'source/data/test.json'
+        test: grunt.file.readJSON 'source/data/test.json'
 
   grunt.loadTasks 'tasks'
 
