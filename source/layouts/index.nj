@@ -13,7 +13,11 @@
 {% block main %}
 
 
-Main content
+<h1>Inline data</h1>
+<p>{{ inline }}</p>
+
+<h1>{{ external.title }}</h1>
+<p>{{ external.content }}</p>
 
 
 {% endblock %}
