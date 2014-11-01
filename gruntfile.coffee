@@ -60,6 +60,8 @@ module.exports = (grunt) ->
         styles: '/assets/styles'
         scripts: '/assets/scripts'
         thumbnails: '/assets/images/thumbnails'
+      data:
+        currentYear: new Date().getFullYear()
       external: grunt.file.readJSON 'source/data/test.json'
 
   grunt.loadTasks 'tasks'
