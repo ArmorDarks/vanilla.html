@@ -60,6 +60,9 @@ module.exports = (grunt) ->
         styles: '/assets/styles'
         scripts: '/assets/scripts'
         thumbnails: '/assets/images/thumbnails'
+      site:
+        name: 'Kotsu'
+        lang: 'en'
       data:
         currentYear: new Date().getFullYear()
         example: grunt.file.readJSON 'source/data/example.json'
