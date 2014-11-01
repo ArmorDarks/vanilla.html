@@ -18,7 +18,6 @@ module.exports = (grunt) ->
     path:
       source:
         root: 'source'
-        data: '<%= path.source.root %>/data'
         fonts: '<%= path.source.root %>/fonts'
         images: '<%= path.source.root %>/images'
         styles: '<%= path.source.root %>/styles'
@@ -52,12 +51,11 @@ module.exports = (grunt) ->
           compiled: '<%= path.build.sprites %>/sprite.png'
           hash: '<%= path.build.sprites %>/hash.json'
 
-
     # Specify data
+    # Template `<%= path.source.data %>` won't work here
     data:
       inline: 'This is inline data'
       external: grunt.file.readJSON 'source/data/test.json'
-      # we can't use <%= path.source.data %> here :(
 
   grunt.loadTasks 'tasks'
 
