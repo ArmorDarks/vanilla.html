@@ -149,7 +149,7 @@
 		<div class="site-wrapper">
 
 
-			© 2000—2014 Footer content
+			© 2000—{{ data.currentYear }} Footer content
 
 
 		</div>
