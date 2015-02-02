@@ -27,6 +27,10 @@ module.exports = (grunt) ->
         sprites: '<%= path.source.root %>/sprites'
         boilerplates: '<%= path.source.root %>/boilerplates'
 
+      temp:
+        root: 'temp'
+        styles: '<%= path.temp.root %>/styles'
+
       build:
         root: 'build'
         assets: '<%= path.build.root %>/assets'
