@@ -7,7 +7,10 @@ module.exports = ->
   @config 'clean',
     build:
       files:
-        src: '<%= path.build.root %>/*'
+        src: [
+          '<%= path.build.root %>/*'
+          '<%= path.temp.root %>/*'
+        ]
     styles:
       files:
         src: [
