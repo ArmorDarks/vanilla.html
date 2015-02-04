@@ -11,6 +11,11 @@ module.exports = ->
           '<%= path.build.root %>/*'
           '<%= path.temp.root %>/*'
         ]
+    temp:
+      files:
+        src: [
+          '<%= path.temp.root %>/*'
+        ]
     styles:
       files:
         src: [

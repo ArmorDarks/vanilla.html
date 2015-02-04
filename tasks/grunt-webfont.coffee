@@ -5,7 +5,7 @@ Generate custom icon webfonts from SVG files
 ###
 module.exports = ->
   @config 'webfont',
-    icons:
+    build:
       src: '<%= path.source.icons %>/{,**/}*.svg'
       dest: '<%= path.build.fonts %>/'
       destCss: '<%= path.temp.styles %>'
