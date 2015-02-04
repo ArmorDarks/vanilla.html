@@ -18,8 +18,8 @@ module.exports = (grunt) ->
     path:
       source:
         root: 'source'
-        icons: '<%= path.source.root %>/icons'
         fonts: '<%= path.source.root %>/fonts'
+        icons: '<%= path.source.root %>/icons'
         images: '<%= path.source.root %>/images'
         styles: '<%= path.source.root %>/styles'
         layouts: '<%= path.source.root %>/layouts'
