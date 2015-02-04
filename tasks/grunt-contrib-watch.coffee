@@ -12,7 +12,7 @@ module.exports = ->
         'autoprefixer'
       ]
     icon:
-      files: ['<%= path.source.icons %>/{,**/}*.{svg}']
+      files: ['<%= path.source.icons %>/{,**/}*.svg']
       tasks: ['newer:webfont']
     sprite:
       files: ['<%= path.source.sprites %>/{,**/}*.{jpg,jpeg,gif,png}']

@@ -106,7 +106,6 @@ module.exports = (grunt) ->
     'uncss:build'
     'csso:build'
     'clean:styles'
-    'clean:temp'
     'processhtml:build'
     'htmlmin:build'
     'responsive_images:thumbnails'

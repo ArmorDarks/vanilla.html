@@ -8,17 +8,13 @@ module.exports = ->
     build:
       files:
         src: [
+          '<%= path.temp.root %>/*'
           '<%= path.build.root %>/*'
-          '<%= path.temp.root %>/*'
-        ]
-    temp:
-      files:
-        src: [
-          '<%= path.temp.root %>/*'
         ]
     styles:
       files:
         src: [
+          '<%= path.temp.root %>/*'
           '<%= path.build.styles %>/*'
           '!<%= file.build.style.min %>'
         ]
