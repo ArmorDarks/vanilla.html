@@ -34,7 +34,7 @@ npm-debug.log
 .sass-cache
 
 ## Build folder
-/build/
+build
 
 ## Temporary folder
-/temp/
+temp
