@@ -16,6 +16,5 @@ module.exports = ->
           baseClass: 'icon'
           classPrefix: 'icon--'
         stylesheet: 'scss'
-        # relativeFontPath: '<%= path.build.fonts %>/'
         htmlDemo: false
         engine: 'node'
