@@ -13,7 +13,7 @@ dependencies:
     - gem install sass --no-ri --no-rdoc
   override:
     - npm install
-    - npm test
+    - grunt build --force #npm test
     
     - zip -r app.zip Dockerfile build/
 test:

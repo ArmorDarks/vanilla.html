@@ -20,7 +20,7 @@ Requires=docker.service
 Restart=always
 TimeoutStartSec=5s
 ExecStartPre=-/usr/bin/docker kill $PROJECT_NAME
-ExecStartPre=-/usr/bin/docker rm $PROJECT_NAME
+ExecStartPre=-/usr/bin/docker rm -f $PROJECT_NAME
 ExecStart=/usr/bin/docker run --name $PROJECT_NAME -p 80:80 $DOCKER_IMAGE_NAME:$PROJECT_VERSION
 [Install]
 WantedBy=multi-user.target
