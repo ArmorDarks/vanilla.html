@@ -11,7 +11,21 @@ DOCKER_IMAGE_NAME=$(echo "$PROJECT_NAME" | tr '[:upper:]' '[:lower:]')
 
 docker build -t "$DOCKER_IMAGE_NAME:$PROJECT_VERSION" $PROJECT_NAME
 
-docker kill $DOCKER_IMAGE_NAME || true
-docker rm --force $DOCKER_IMAGE_NAME || true
+sudo tee -a /etc/systemd/system/$PROJECT_NAME.service > /dev/null << EOF
+[Unit]
+Description=Nginx based application
+After=docker.service
+Requires=docker.service
+[Service]
+Restart=always
+TimeoutStartSec=5s
+ExecStartPre=-/usr/bin/docker kill $PROJECT_NAME
+ExecStartPre=-/usr/bin/docker rm $PROJECT_NAME
+ExecStart=/usr/bin/docker run --name $PROJECT_NAME -p 80:80 $DOCKER_IMAGE_NAME:$PROJECT_VERSION
+[Install]
+WantedBy=multi-user.target
+EOF
 
-docker run --restart="always" -d --name $DOCKER_IMAGE_NAME -p 80:80 $DOCKER_IMAGE_NAME:$PROJECT_VERSION
+sudo systemctl daemon-reload
+sudo systemctl enable $PROJECT_NAME.service
+systemctl restart $PROJECT_NAME.service
