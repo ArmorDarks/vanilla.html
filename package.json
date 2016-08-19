@@ -70,7 +70,7 @@
     "marked": "^0.3.5",
     "moment": "^2.10.6",
     "node-gettext": "^1.0.1",
-    "numbro": "^1.6.2",
+    "numbro": "^1.9.3",
     "nunjucks-markdown": "^1.1.0",
     "smart-plurals": "^1.1.0",
     "sprintf-js": "^1.0.3",
