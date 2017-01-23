@@ -10,7 +10,19 @@
 - [nj] Added ability to specify specific for page `themeColor` via `themeColor` in Gray Matter.
 
 ### Changed
-- [ci] switched to `alpine` linux distribution as base layer for nginx container
+- [ci] Switched to `alpine` linux distribution as base layer for nginx container.
+- [package] Moved linting and testing dependencies to `devDependencies`.
+- [sass] Updated Ekzo to 2.4.0
+- [sass] Since Ekzo 2.4.0 doesn't provide spacing for icons and sprites any more, added them to Kotsu in form of `.Icon--left` and `.Icon--right`.
+- [sass] Renamed `_Icons.scss` to `_Icon.scss`.
+- [sass] Since Ekzo 2.4.0 also doesn't provide `.o-btn` size variations and default paddings for buttons, added them in form of `.Btn*` component.
+- [sass] `.Btn` by default extends `.o-btn`.
+- [sass] Followed Ekzo changes:
+  * Set settings, which shouldn't generate CSS properties, to `null`;
+  * Converted `$ekzo-line-height` to `$ekzo-line-heights` map and using new `ekzo-line-height()` to retrieve values from it;
+  * Added `.o-svg-icon` to imports.
+
+[nj] Used new `.Btn*` instead of `.o-btn*` and `.Icon*` instead of `.o-icon*`.
 
 ## 1.3.1
 
@@ -18,7 +30,7 @@
 - [ci] Added support for [AppVoyer](https://www.appveyor.com/)
 
 ### Changed
-- [package] removed `devDepencencies` section and all packages moved to `dependencies` section since it's impossible to use kotsu with `npm install --production` or `--only` flag, [see](https://docs.npmjs.com/cli/install)
+- [package] Removed `devDependencies` section and all packages moved to `dependencies` section since it's impossible to use kotsu with `npm install --production` or `--only` flag, [see](https://docs.npmjs.com/cli/install)
 
 ### Fixed
 - [grunt] Updated `uncss` rules to ignore not only `.is-*`, but also `.*is-*`, `.*has-*` and `.*not-*`. This allow to use more specific selectors, like `.nav-is-active` when needed.
