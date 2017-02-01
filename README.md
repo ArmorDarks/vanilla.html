@@ -1,5 +1,7 @@
 # Kotsu
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/LotusTM/Kotsu.svg)](https://greenkeeper.io/)
+
 [![Travis Build Status](https://img.shields.io/travis/LotusTM/Kotsu.svg?label=travis)](https://travis-ci.org/LotusTM/Kotsu)
 [![CircleCI Build Status](https://img.shields.io/circleci/project/LotusTM/Kotsu.svg?label=circle)](https://circleci.com/gh/LotusTM/Kotsu)
 [![AppVeyor Build Status](https://img.shields.io/appveyor/ci/LotusTM/Kotsu.svg?label=appveyor)](https://ci.appveyor.com/project/LotusTM/Kotsu)
