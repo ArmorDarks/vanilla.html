@@ -4,17 +4,40 @@
 
 ### Added
 - [templates] Outdated Browser component now has `rel='nofollow'` specified in the link.
-- [templates] Example component now will generate id and anchor for each heading, so it is possible to reference specific section whenever needed.
+- [templates] Example component now will generate id and anchor for each heading, so it is possible to reference specific section whenever needed
+- [modules] Added `traverse` function to walk Objects and Arrays and recursively apply specified function with a predicate. Mostly useful for Kotsu internal dark deeds — rendering Objects and Arrays :sparkles:
+- [modules] Added `format()` (`sprintf()`) tests.
 
 ### Changed
 - [grunt] `uncss` task will now ignore any remote CSS by default (starting with `https`, `http` or `//`) to avoid pulling into main stylesheets file unexpected external CSS, which can be downloaded by 3rd-party scripts.
 
    Instead, it is recommended to whitelist needed remote files explicitly, to be sure about what gets into main stylesheets and to avoid unexpected duplication.
 
+- [modules] Improved `nunjucks-render`.
+
+   Now it renders objects and arrays recursively and no longer relies on `JSON.stringify()`.
+
+   As a result, slightly improved performance, less limitations, implied by JSON stringification, and no more tricky code to properly remove escaping of Nunjucks templates.
+
+   See [#173](https://github.com/LotusTM/Kotsu/issues/173).
+
+- [modules] Improved `sprintf`, which used as `format()` filter in Nunjucks.
+
+   Now it applies `sprintf` recursively to input and no longer relies on `JSON.stringify()` with all its limitations.
+
+   As a side effect, it gains minor performance boost and will no longer trigger stupid errors with any string containing normal percentages, like `23%`.
+
+   See [#173](https://github.com/LotusTM/Kotsu/issues/173).
+
+
+- [modules] Converted `sprintf` to pure JavaScript [#287](https://github.com/LotusTM/Kotsu/issues/287).
+- [modules] Converted `nunjucks-render` to pure JavaScript [#287](https://github.com/LotusTM/Kotsu/issues/287).
+- [modules] Renamed `sprintf` to `format`, just for consistency with filter used in Nunjucks.
 - [styles] In supplied theme-file `outer-space` color renamed to more generic `secondary` color.
 - [styles] Given better comments headers for Btn component file.
 - [static][templates] Renamed `mstile.png` and `mstile-wide.png` icons to `mstile-310x310.png` and `mstile-310x150.png` to be more specific sizes and usage.
 - [ci] Disabled package-lock.json updates on npm install for AppVeyor [#289](https://github.com/LotusTM/Kotsu/issues/289).
+- [tests] Improved Nunjucks `render()` filter tests.
 
 ### Removed
 - [static] Removed accidentally left and unused `mstile-70x70.png` icon.
