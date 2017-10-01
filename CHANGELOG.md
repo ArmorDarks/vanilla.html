@@ -11,6 +11,11 @@
    This should clarify obscurity of vague and hard to debug internal errors when `grunt.locales`, Matter's `SITE.locales` or `PAGE.locale` are undefined or wrong.
 - [tests] Added `Breadcrumb()` Nunjucks component tests.
 
+### Changed
+- [package][tests] Replaced NPM `postbuild` script, which checks clean working dir, with more reliable `clean-workdir.js` test.
+
+   It will no longer occasionally pass wrongly test when `grep` is unavailable (like in Windows environment out of box).
+
 ## 1.8.0
 
 ### Added
