@@ -45,7 +45,7 @@
     "website"
   ],
   "dependencies": {
-    "autoprefixer": "7.2.3",
+    "autoprefixer": "7.2.4",
     "gmsmith": "1.1.3",
     "grunt": "1.0.1",
     "grunt-cache-bust": "1.6.0",
