@@ -45,7 +45,7 @@
   ],
   "dependencies": {
     "autoprefixer": "8.6.0",
-    "gettext-parser": "1.4.0",
+    "gettext-parser": "2.0.0",
     "gmsmith": "1.2.0",
     "grunt": "1.0.3",
     "grunt-cache-bust": "1.7.0",
