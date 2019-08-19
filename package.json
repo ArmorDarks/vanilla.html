@@ -100,7 +100,7 @@
     "jest": "24.8.0",
     "jest-watch-typeahead": "0.3.1",
     "snazzy": "8.0.0",
-    "standard": "13.1.0",
+    "standard": "14.0.0",
     "stylelint": "10.1.0",
     "stylelint-config-standard": "18.3.0",
     "stylelint-scss": "3.9.3",
