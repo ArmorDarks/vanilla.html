@@ -89,8 +89,8 @@
     "urlify": "0.3.6"
   },
   "devDependencies": {
-    "@babel/core": "7.6.0",
-    "@babel/preset-env": "7.6.0",
+    "@babel/core": "7.6.3",
+    "@babel/preset-env": "7.6.3",
     "babel-eslint": "10.0.3",
     "babel-jest": "24.8.0",
     "babel-loader": "8.0.6",
